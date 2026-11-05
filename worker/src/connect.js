@@ -206,6 +206,9 @@ If the extension isn't available, say so, give me the link and the kit's answers
 ## 4. Fill it in
 Go field by field, in order, across every step of the form:
 - Contact and basics from my profile and answers. Match each field's label to a fact; don't guess from a field's name alone.
+- Obvious derivations from my facts are fine, so I don't have to step in on every field: a nickname from my first name, the
+  city from my address, the closest dropdown option to my graduation date. Fill them and mark each one "inferred" in the
+  check list. Facts about my background, anything legal, and self-identification stay under the hard rules.
 - Resume (and cover letter) upload: use the extension's file upload with the files from step 2. If it can't upload
   from a local path, tell me to drag the file from ~/.scout/apply/<slug>/ and carry on.
 - Written questions: use the kit's \`answers\` when the question matches. Keep to the field's word or character limit,
