@@ -191,8 +191,10 @@ If a call says the key isn't active, tell me to make a new key on Scout's "you" 
 ## 2. Get the files
 Make \`~/.scout/apply/<slug>/\`. If \`has_resume_pdf\`, save \`GET ${SITE}/api/c/kit/<slug>/resume.pdf\` there as
 \`resume.pdf\` (and \`letter.pdf\` from \`.../letter.pdf\` if \`has_letter_pdf\`). Don't write anything for this outside ~/.scout.
-If the PDF call answers 404 or 401 on an older Scout, ask me to save resume.pdf from the kit's review page and tell
-you where it is, or leave the upload for me and list it.
+Download with \`curl -fsS -o <file> ...\` so an error is never saved as the file, then check it starts with \`%PDF\`
+(\`head -c 4 <file>\`). If the call fails (404 or 401 on an older Scout) or the file isn't a PDF, delete it, treat that
+upload as missing, and either ask me to save resume.pdf from the kit's review page and tell you where it is, or leave
+the upload for me and list it. Never upload a file you haven't checked.
 Also read \`answers\` from /api/c/me and ~/.scout/profile.md for plain facts (name, school, graduation, links).
 
 ## 3. Open the form
