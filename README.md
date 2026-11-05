@@ -47,7 +47,7 @@ Cloudflare Worker (JavaScript, free tier)
 - **Python 3.12** watcher in `scout/`: listings, matching, scoring, dedupe, eligibility, page watchers, alerts, sync. Standard library plus PyYAML.
 - **Cloudflare Worker** in `worker/src/`: server-rendered pages, no framework, no build step. `index.js` (routing, the owner's pages), `accounts.js` (sign-up, log in, the questions), `student.js` (the student app and alerts), `match.js` (pure matching logic), `landing.js`. Every color and size lives in `tokens.css`.
 - **Tests:** 289 Python tests on saved fixtures (`.venv/bin/python -m unittest discover -s tests`) and JavaScript tests for matching, scoring, and alert timing (`cd worker && npm test`), plus end-to-end runs against `wrangler dev`.
-- **Claude Code** for the owner's own prep kits (`.claude/commands/`).
+- **Claude Code** for the owner's own prep kits (`.claude/commands/`). Students connect their own Claude Code from the you page: `/scout` preps a kit, and `/scout-apply` fills the application form in their own Chrome (Claude in Chrome extension) and stops before Submit (`worker/src/connect.js`).
 
 ## What changed in this release
 - A new look: three themes that follow the time of day where you are (light with a sun, sky with drifting clouds, dark with a lighthouse sweeping its beam), cream glass cards, a handwritten greeting, and scores in a hand-drawn style. The ◐ button picks a theme. The sun and lighthouse were modeled in Blender ([worker/art/scene.py](worker/art/scene.py)). The brand is written up in [docs/BRAND.md](docs/BRAND.md).
